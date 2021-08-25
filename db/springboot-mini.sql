@@ -13,6 +13,8 @@
 
  Date: 27/10/2020 09:55:20
 */
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`student_system` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE 'springboot-mini';
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;

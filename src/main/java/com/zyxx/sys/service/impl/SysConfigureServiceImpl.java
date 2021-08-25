@@ -51,7 +51,8 @@ public class SysConfigureServiceImpl extends ServiceImpl<SysConfigureMapper, Sys
         sysConfigure.setUpdateUser(SingletonLoginUtils.getSysUserId());
         this.updateById(sysConfigure);
         // 存入redis
-        redisUtil.set(RedisConst.Key.SYS_CONFIGURE, JSONObject.toJSONString(sysConfigure));
+//        redisUtil.set(RedisConst.Key.SYS_CONFIGURE, JSONObject.toJSONString(sysConfigure));
+        redisUtil.set(RedisConst.Key.SYS_CONFIGURE, sysConfigure);
         return ResponseResult.success();
     }
 }

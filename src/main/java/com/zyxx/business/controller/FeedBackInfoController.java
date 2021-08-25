@@ -32,7 +32,7 @@ public class FeedBackInfoController {
 
     @GetMapping("init")
     public String init(Model model) {
-        model.addAttribute("type", sysDictDetailService.listSysDictDetailByDictCode(""));
+        model.addAttribute("type", sysDictDetailService.listSysDictDetailByDictCode("feed_back_type"));
         return "business/feedbackinfo/list";
     }
 
