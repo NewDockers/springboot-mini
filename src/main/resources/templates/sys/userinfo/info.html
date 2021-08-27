@@ -23,7 +23,7 @@
                     <label class="layui-form-label required">账户</label>
                     <div class="layui-input-block">
                         <input type="hidden" name="id" th:value="${data.id}">
-                        <input type="text" name="account" lay-verify="required|phone" lay-reqtext="请输入用户账号" placeholder="请输入" class="layui-input" disabled>
+                        <input type="text" name="account" lay-verify="required" lay-reqtext="请输入用户账号" placeholder="请输入" class="layui-input" disabled>
                         <tip>用户登录账号，不支持修改</tip>
                     </div>
                 </div>

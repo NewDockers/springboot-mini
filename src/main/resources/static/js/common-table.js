@@ -1,5 +1,10 @@
 // 搜索信息，展开，收起
 $('legend').click(function () {
+    if($('legend b').text()=="收起"){
+        $('legend b').html("展开")
+    }else{
+        $('legend b').html("收起")
+    }
     $('fieldset div').slideToggle();
 });
 
@@ -13,8 +18,8 @@ $('body').on('click', '.avatar-show', function () {
         r += '</div>';
         layer.open({
             type: 1,
-            title: '图片预览',
-            area: ['400px', '600px'],
+            title: '图片',
+            area: ['40px', '60px'],
             content: r,
             shadeClose: true
         });

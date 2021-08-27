@@ -113,7 +113,7 @@
             <div id="echarts-records" style="background-color:#ffffff;min-height:400px;padding: 10px"></div>
         </div>
         <div class="layui-col-xs12 layui-col-md3">
-            <div id="echarts-pies" style="background-color:#ffffff;min-height:400px;padding: 10px"></div>
+            <div id="echarts-pies" style="background-color:#ffffff;min-height:400px;pxpadding: 10px"></div>
         </div>
     </div>
 
@@ -173,7 +173,7 @@
 
         var optionRecords = {
             title: {
-                text: '指标名称-报表图'
+                text: '报表图'
             },
             tooltip: {
                 trigger: 'axis',
@@ -264,7 +264,7 @@
 
         var optionPies = {
             title: {
-                text: '指标名称-玫瑰图',
+                text: '玫瑰图',
                 left: 'center'
             },
             tooltip: {
@@ -310,6 +310,10 @@
         var echartsDataset = echarts.init(document.getElementById('echarts-dataset'), 'walden');
 
         var optionDataset = {
+            title: {
+                text: '柱状图',
+
+            },
             legend: {},
             tooltip: {},
             dataset: {
