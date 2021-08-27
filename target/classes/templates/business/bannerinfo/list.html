@@ -13,14 +13,14 @@
     <div class="layuimini-main">
 
         <fieldset class="table-search-fieldset">
-            <legend>搜索信息(<b style="color: #1E9FFF;cursor: pointer">收起--展开</b>)</legend>
+            <legend>搜索信息(<b style="color: #1E9FFF;cursor: pointer">收起</b>)</legend>
             <div style="margin: 10px 10px 10px 10px">
                 <form class="layui-form layui-form-pane" lay-filter="search-form" action="">
                     <div class="layui-form-item">
                         <div class="layui-inline">
                             <label class="layui-form-label">类型</label>
                             <div class="layui-input-inline">
-                                <select name="status">
+                                <select name="type">
                                     <option value="" selected>请选择</option>
                                     <option th:each="item : ${type}" th:value="${item.code}" th:text="${item.name}"></option>
                                 </select>
@@ -114,9 +114,10 @@
         // 重置搜索
         form.on('submit(data-reset-btn)', function (data) {
             form.val("search-form", {
-                "code": ''
-                ,"status": ''
-                ,"name": ''
+                "type": ''
+                // "code": ''
+                // ,"status": ''
+                // ,"name": ''
             });
             table.reload('currentTableId', {
                 page: {
